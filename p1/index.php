@@ -8,6 +8,7 @@
   <title>DGMD E-2 Project 1</title>
   <meta name="description" content="Proof of concept for Git and Server setup">
   <meta name="author" content="Chantelle D'mello">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Styles
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
