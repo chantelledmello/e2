@@ -34,7 +34,7 @@
         <h1> Chantelle D'mello </h1>
         <p> Hi guys! My name is Chantelle and I'm an international Graduate student currently pursuing my MLA in Digital Media while living in sunny Trinidad and Tobago.</p>
         <p> While my background is in journalism (I graduated in 2016 with a BSc in Journalism from Northwestern - go Wildcats!), I've realised
-          that my true love is in reating digital products that combine graphics with storytelling to create seamless, enriching experiences. </p>
+          that my true love is in creating digital products that combine graphics with storytelling to create seamless, enriching experiences. </p>
 
         <p>
             I'm halfway through my degree and have basic programming knowledge via David Malan's CS50 and Lisa Diorio's WP class that touched on PHP.
