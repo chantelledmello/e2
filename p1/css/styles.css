@@ -86,4 +86,11 @@ img:last-child {
     width: 90px;
   }
 
+  h1 {
+    line-height: 2.5rem;
+  }
+  p {
+    padding: 0 2rem;
+  }
+
 }
