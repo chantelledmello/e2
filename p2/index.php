@@ -1,4 +1,4 @@
-<?php require 'index-controller.php'; ?>
+<?php require 'index-controller.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,16 +32,23 @@
       <div>
         <img src="images/rockpaperscissors.png" alt="profile picture">
       </div>
-      <h1> Game Mechanics </h1>
+      <h1> Rock, Paper, Scissors </h1>
+      <h2> Best of Three </h2>
+      <h2> Game Mechanics </h2>
       <p> Player A and Player B randomly “throw” either Rock, Paper or Scissors.
         A tie is declared if both players throw the same move.
         Otherwise: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. </p>
-      <h1> Results </h1>
+      <h2> Results </h2>
+      <?php foreach ($rounds as $key => $round) {?>
       <ul>
-        <li>Player A picked <?php echo $playerA; ?></li>
-        <li>Player B picked <?php echo $playerB; ?></li>
-        <li><?php echo $winner; ?></li>
-      </ul>
+        <li>Player A picked <?php echo $round["A"]; ?></li>
+        <li>Player B picked <?php echo $round["B"]; ?></li>
+        <li><?php echo $round["winner"]; ?></li>  </ul>
+      <?php }?>
+
+      <p> <?php echo $overallWinner; ?></p>
+
+
     </div>
   </section>
 
