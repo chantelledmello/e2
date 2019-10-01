@@ -9,30 +9,31 @@ section {
   line-height: 25px;
 }
 
-section > div {
-    width: 40%;
-    text-align: center;
-    padding: 4rem 2rem;
-    margin: 6rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 2%;
-    box-shadow: 19px 19px 90px -17px rgba(0,0,0,0.3);
+section>div {
+  width: 35%;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 6rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 2%;
+  box-shadow: 19px 19px 90px -17px rgba(0, 0, 0, 0.3);
 }
 
-div > div {
-  display: inline-block;
+ul {
+  text-align: left;
   position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 12px 11px 42px -14px rgba(0,0,0,0.75);
+  left: -10px;
 }
 
-div > div > img:first-of-type {
-  width: 100%;
+li:last-of-type {
+  font-weight: 900;
+  color: red;
+}
+
+div>div>img:first-of-type {
+  width: 35%;
   height: auto;
   filter: saturate(86%);
 }
@@ -49,20 +50,16 @@ h1 {
 
 p {
   width: 100%;
-  padding: 0 7rem;
+  padding: 0 3rem;
 }
 
-p:last-of-type {
-  margin-bottom: 2rem;
-}
-
-img:last-child {
-  width: 50px;
+/* img {
+  width: 40px;
   height: auto;
-}
+} */
 
 @media (max-width: 1024px) {
-  section > div {
+  section>div {
     width: 60%;
   }
 
@@ -76,7 +73,7 @@ img:last-child {
 }
 
 @media (max-width: 780px) {
-  section > div {
+  section>div {
     width: 100%;
     font-size: 17px;
     line-height: 28px;
@@ -89,6 +86,7 @@ img:last-child {
   h1 {
     line-height: 2.5rem;
   }
+
   p {
     padding: 0 2rem;
   }
