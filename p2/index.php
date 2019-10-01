@@ -37,7 +37,8 @@
       <h2> Game Mechanics </h2>
       <p> Player A and Player B randomly “throw” either Rock, Paper or Scissors.
         A tie is declared if both players throw the same move.
-        Otherwise: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. </p>
+        Otherwise: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. At the end of
+      three rounds, an overall winner is declared. </p>
       <h2> Results </h2>
       <?php foreach ($rounds as $key => $round) {?>
       <ul>
