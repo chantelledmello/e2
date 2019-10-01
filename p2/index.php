@@ -38,7 +38,8 @@
       <p> Player A and Player B randomly “throw” either Rock, Paper or Scissors.
         A tie is declared if both players throw the same move.
         Otherwise: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. At the end of
-      three rounds, an overall winner is declared. </p>
+      three rounds, an overall winner is declared. If two games tie,
+    the winner is the winner of the remaining round.</p>
       <h2> Results </h2>
       <?php foreach ($rounds as $key => $round) {?>
       <ul>
