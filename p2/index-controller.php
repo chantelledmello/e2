@@ -10,13 +10,11 @@ $rounds = [];
 
 for ($i = 0; $i < 3; $i++) {
 
-// Create an array to store Player throws
-
 // Assign Player A a random throw
     $playerA = $throws[array_rand($throws)];
     $playerB = $throws[array_rand($throws)];
 
-// Compare
+// Compare and find the winner of this round
     $winner = null;
 
     if ($playerA == $playerB) {
@@ -31,12 +29,18 @@ for ($i = 0; $i < 3; $i++) {
     $rounds[] = array("A" => $playerA, "B" => $playerB, "winner" => $winner);
 }
 
-// var_dump($rounds);
-
 // Compare individual round winners and decide on an overall winner
+
+/* Create two variables to store the number of times the
+ *  program finds the strings 'Player A' and 'Player B' in the
+ *  values mapped to the winner key
+ */
 
 $countA = 0;
 $countB = 0;
+
+// Iterate through the array and find the strings + store their
+// count in the initialised variables
 
 foreach ($rounds as $key => $round) {
 
@@ -55,4 +59,3 @@ foreach ($rounds as $key => $round) {
         $overallWinner = "The overall winner is Player B";
     }
 }
-// var_dump($overallWinner);
