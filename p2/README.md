@@ -19,7 +19,7 @@
 * In the view file, print out results to the page using echoes
 
 ## Outside resources
-*your list of outside resources go here*
+N/A
 
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
+* Just a question - was there an easier way to run the simulation thrice and find out the winner? Would love to know if there was an alternative. 
