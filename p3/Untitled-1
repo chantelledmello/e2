@@ -1,0 +1,9 @@
+<?php foreach ($rounds as $key => $round) {?>
+      <ul>
+        <li>Player A picked <?php echo $round["A"]; ?></li>
+        <li>Player B picked <?php echo $round["B"]; ?></li>
+        <li><?php echo $round["winner"]; ?></li>
+      </ul>
+      <?php }?>
+
+      <p> <?php echo $overallWinner; ?></p>
