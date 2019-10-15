@@ -23,6 +23,7 @@ $rounds = [];
  * values mapped to the winner key */
 $countA = 0;
 $countB = 0;
+$sum = 0;
 
 for ($i = 0; $i < count($arrayPlayerA); $i++) {
     // foreach ($choices as $choice)
@@ -50,21 +51,20 @@ for ($i = 0; $i < count($arrayPlayerA); $i++) {
     // Iterate through the array and find the strings + store their count in the initialised variables
     $countA += substr_count($rounds[$i]["winner"], 'You');
     $countB += substr_count($rounds[$i]["winner"], 'The Computer');
+
+    // Subtract the two variables to create the basis for a control structure (an if construct)
+    $sum = $countA - $countB;
     $overallWinner = null;
 
-    // Compare individual round winners and decide on an overall winner
-    if (($countA >= 2) || (($countA == 1) && ($countB == 0))) {
-        $overallWinner = "You are the winner!";
-    } else if ((($countA == 1) && ($countB == 1)) || (($countA == 0) && ($countB == 0))) {
-        $overallWinner = "The game is a tie";
-    } else {
+    if ($sum < 0) {
         $overallWinner = "Uh oh, the Computer wins!";
+    } else if ($sum > 0) {
+        $overallWinner = "You are the winner!";
+    } else {
+        $overallWinner = "The game is a tie";
     }
 
 }
-
-// var_dump($rounds);
-// var_dump($overallWinner);
 
 // Store variables in a Session to be used by index.php
 $_SESSION['overallWinner'] = $overallWinner;

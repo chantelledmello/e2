@@ -7,7 +7,7 @@
   <!-- Basic Page Info
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>DGMD E-2 Project 1</title>
+  <title>DGMD E-2 Project 3</title>
   <meta name="description" content="Proof of concept for Git and Server setup">
   <meta name="author" content="Chantelle D'mello">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,6 +63,7 @@
           <input type="radio" name="round3" value="paper" id="paper3"> <label for="paper3"> paper </label>
           <input type="radio" name="round3" value="scissors" id="scissors3"> <label for="scissors3"> scissors </label>
         </div>
+
         <?php if ($showError) {?>
           <p class="errorMessage"> <?php echo $errorMessage; ?> </p>
         <?php }?>
@@ -77,13 +78,14 @@
         <h3 class="results"> Results </h3>
     <?php foreach ($rounds as $key => $round) {?>
             <ul id="results">
-              <li>Player A picked <?php echo $round["A"]; ?></li>
-              <li>Player B picked <?php echo $round["B"]; ?></li>
-            <?php if ($round["winner"] && $round["winner"] == "You") {?>
+              <li>You picked <?php echo $round["A"]; ?></li>
+              <li>The Computer picked <?php echo $round["B"]; ?></li>
+            <?php if ($round["winner"]) {
+    if ($round["winner"] == "You") {?>
               <li class="win"> <?php echo $round["winner"] . " win"; ?></li>
-            <?php } elseif ($round["winner"] && $round["winner"] !== "You") {?>
+            <?php } else {?>
               <li class="lose"> <?php echo $round["winner"] . " wins"; ?></li>
-              <?php } else {?>
+              <?php }} else {?>
               <li> It is a tie </li>
             <?php }?>
             </ul>
