@@ -36,11 +36,12 @@
       <h1> Rock, Paper, Scissors </h1>
       <h2> Best of Three </h2>
       <h3> Game Mechanics </h3>
-      <p> Player A and Player B randomly “throw” either Rock, Paper or Scissors.
-        A tie is declared if both players throw the same move.
-        Otherwise: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. At the end of
+      <p> Let's play rock, paper, scissors against the computer.
+        Pick your move and the computer will do the same.
+        A tie is declared if both you and the computer throw the same move.
+        Otherwise: rock beats scissors, scissors beats paper, paper beats rock. At the end of
         three rounds, an overall winner is declared. If two games tie,
-        the winner is the winner of the remaining round.</p>
+        the winner is the winner of the remaining round. Bonne chance!</p>
       <h3> Pick One </h3>
       <p> Pick your throws for each round of the game using the radio buttons below. You can only pick one option per
         round.</p>
