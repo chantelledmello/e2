@@ -17,10 +17,10 @@
     * If playerA and playerB pick the same throw, assign the winner as false
     * If playerA picks rock and playerB picks scissors, or if playerA picks paper and playerB picks rock, or if playerA picks scissors and playerB picks paper, assign the winner as 'you'
     * Else, if there's any other scenario, assign the winner as the Computer
-* Store all of these variables - playerA throw, playerB throw, and the winner of each round - into an empty multi-dimensional array, where each array represents a round with the three values stored
-* Iterate through this array and count how many times the winner is 'you' or the 'computer' using the substr_count function to count instances of the aforementioned strings
+    * Store all of these variables - playerA throw, playerB throw, and the winner of each round - into an empty multi-dimensional associative array, where each array represents a round with the three values stored
+    * As we're iterating through the array, count how many times the winner is 'you' or the 'computer' using the substr_count function to count instances of the aforementioned strings
     * Do this using two separate variables countA and countB to store the tally of each instance
-* Do a little bit of math to figure out who the overall winner is via a conditional:
+* Exit the loop and do a little bit of math to figure out who the overall winner is via a conditional:
     * If countA - countB > 0, then there are more mentions of the word 'you' than 'computer', so the user wins
     * If countA - countB < 0, then the computer wins
     * If countA == countB then the game ties
@@ -37,4 +37,6 @@
 N/A
 
 ## Notes for instructor
-* Just a question - was there an easier way to run the simulation thrice and find out the winner? Would love to know if there was an alternative. 
+* Same question as before, because I love to learn how to make my code as efficient and dry as possible - Is there an easier way to run the game? 
+* I worked in your previous suggestion to keep count as the program is looping through the array and remove the extraneous secondary loop, but would like to know if there are any other changes you'd suggest
+* I also reworked my previous method of figuring out the overall winner, making it simpler and more readable by: (1) subtracting the two counts and storing the value in a new variable sum, (2) using the sum variable to create the conditional for the various overall winner scenarios, thus eliminating the endless logical operators I had in the previous iteration

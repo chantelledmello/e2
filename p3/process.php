@@ -25,9 +25,9 @@ $countA = 0;
 $countB = 0;
 
 for ($i = 0; $i < count($arrayPlayerA); $i++) {
-    // foreach ($choices as $choice)
 
-// Assign Player B a random throw
+// Assign a value from the player array to playerA
+    // and assign the computer a random throw
     $playerA = $arrayPlayerA[$i];
     $playerB = $throws[array_rand($throws)];
 
@@ -47,22 +47,21 @@ for ($i = 0; $i < count($arrayPlayerA); $i++) {
     $rounds[] = array("A" => $playerA, "B" => $playerB, "winner" => $winner);
 
     // Count and compare round winners to find the overall Winner
-    // Iterate through the array and find the strings + store their count in the initialised variables
+    // Find the strings + store their count in the initialised variables
     $countA += substr_count($rounds[$i]["winner"], 'You');
     $countB += substr_count($rounds[$i]["winner"], 'The Computer');
+}
 
-    // Subtract the two variables to create the basis for a control structure (an if construct)
-    $sum = $countA - $countB;
-    $overallWinner = null;
+// Subtract the two variables to create the basis for a control structure (an if construct)
+$sum = $countA - $countB;
+$overallWinner = null;
 
-    if ($sum < 0) {
-        $overallWinner = "Uh oh, the Computer wins!";
-    } else if ($sum > 0) {
-        $overallWinner = "You are the winner!";
-    } else {
-        $overallWinner = "The game is a tie";
-    }
-
+if ($sum < 0) {
+    $overallWinner = "Uh oh, the Computer wins!";
+} else if ($sum > 0) {
+    $overallWinner = "You are the winner!";
+} else {
+    $overallWinner = "The game is a tie";
 }
 
 // Store variables in a Session to be used by index.php
