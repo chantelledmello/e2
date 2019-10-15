@@ -23,7 +23,6 @@ $rounds = [];
  * values mapped to the winner key */
 $countA = 0;
 $countB = 0;
-$sum = 0;
 
 for ($i = 0; $i < count($arrayPlayerA); $i++) {
     // foreach ($choices as $choice)
