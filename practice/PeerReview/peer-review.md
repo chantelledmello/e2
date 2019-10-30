@@ -19,7 +19,7 @@ Adding a simple check like ```if (!empty($_GET['guess]))``` would eliminate this
 
 ### Referencing the course nots on [Form design flow](https://hesweb.dev/e2/notes#/php/form-flow), describe the form design flow used in this project.
 
-Stephanie used form flow Design C (as so did many of us, I'm guessing!) in her program. She created a basic form in ```index.php```, sent it to ```process.php``` to process, stored variables in a session that were then retrieved in ```index-controller.php```, and displayed back again in ```index.php``` using a series of conditional loops. 
+Stephanie used form flow Design C in her program. She created a form in ```index.php```, sent it to ```process.php``` to process, stored variables in a session that were then retrieved in ```index-controller.php```, and displayed back again in ```index.php``` using a series of conditional loops. 
 
 ### Are there any separation of concern issues (i.e. non-display specific logic in view files, display code in controller files)? 
 
