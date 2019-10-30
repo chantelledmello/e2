@@ -32,7 +32,7 @@ Nope.
 
 * $_GET = Gets the value of an field from and HTML form
 * !isset = Checks to see if a variable exists/is set and not null
-* session_start() = Starts a session in ```process.php```, and resumes the same session in index-controller.php
+* session_start() = Starts a session in ```process.php```, and resumes the same session in ```index-controller.php```
 * header() = Sends an HTTP header/URL to an address passed as an argument
 * $_SESSION = Sets PHP Session variables and is stored in the server
 * rand(x,y) = Assigns a random integer between the min and max values specified
