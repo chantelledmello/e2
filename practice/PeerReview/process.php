@@ -16,5 +16,5 @@ if ($guess) {
 
 $_SESSION['results'] = $results;
 $_SESSION['error'] = $error;
-$_SESSION['compAnswer'] = $compAnswer;
+
 header('Location: index.php');
