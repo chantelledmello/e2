@@ -28,10 +28,18 @@ class ProductController extends Controller
     {
         // grabs the id from the URL query string
         $id = $this->app->param('id');
+        // if there's no id in the query string, don't just display zipfoods.loc/product
+        // instead redirect to products
+        if (is_null($id)) {
+            return $this->app->redirect('/products');
+        }
+
+        // if id exists in url query string, retrieve product by id
         $product = $this->products->getById($id);
 
+        // if the product with the specific id doens't exist, return the error page
         if (is_null($product)) {
-            return $this->app->view("errors.404");
+            return $this->app->view("products.missing", ['id' => $id]);
         }
 
         // the view method just grabs a view file and passes variables to it
