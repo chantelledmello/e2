@@ -72,5 +72,5 @@ $_SESSION['errorMessage'] = $errorMessage;
 //Redirect back to index.php to display results once processed
 // header('Location: index.php#results');
 
-$foo = new Foobar();
-var_dump(gettype($foo));
+// $foo = new Foobar();
+// var_dump(gettype($foo));

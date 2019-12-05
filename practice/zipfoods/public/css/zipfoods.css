@@ -72,7 +72,13 @@ Product Show
     padding: 10px;
 }
 
-#product-review input[type=text] {
+#product-review h3,
+#product-review button {
+    margin: 20px auto;
+}
+
+#product-review input[type=text],
+#product-review input[type=number] {
     text-align: center;
     width: 50%;
     margin: auto;
@@ -80,4 +86,6 @@ Product Show
 
 #product-review textarea {
     height: 150px;
+    width: 50%;
+    margin: auto;
 }
