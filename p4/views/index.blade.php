@@ -12,6 +12,18 @@
         <img src="images/rockpaperscissors.png" alt="profile picture">
       </div>
       <h1> {{$app->config('app.name')}} </h1>
+
+      <!-- Display errors. If none, display confirmation message
+      @if($app->errorsExist())
+      <div class="alert alert-fail" role="alert">
+        <ul>
+        @foreach($app->errors() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+      </div>
+      @endif -->
+
       <h3> Game Mechanics </h3>
       <p> Let's play rock, paper, scissors against the computer.
         Pick your move and the computer will do the same.
@@ -24,12 +36,37 @@
         round.</p>
       <form method='GET' action='/save-results'>
         <div>
-          <h4> Round 1 </h4>
           <input type="radio" name="result" value="rock" id="rock"> <label for="rock"> rock </label>
           <input type="radio" name="result" value="paper" id="paper"> <label for="paper"> paper </label>
           <input type="radio" name="result" value="scissors" id="scissors"> <label for="scissors"> scissors </label>
         </div>
         <button type='submit'> Let's Play </button>
         </form>
+
+        <!-- Display results from session variables after form is processed -->
+
+        @if ($result)
+        <hr>
+
+        <h3> Results </h3>
+
+          @if ($result['winner'] == 1)
+          <div class="alert alert-success" role="alert">
+          @elseif ($result['winner'] == 2)
+          <div class="alert alert-fail" role="alert">
+          @else
+          <div class="alert alert-neutral" role="alert">
+          @endif
+
+        <p> The user picked {{$result['user_pick']}}. The computer picked {{$result['computer_pick']}}.
+        @if ($result['winner'] == 1)
+          The player won!
+          @elseif ($result['winner'] == 2)
+          Uh oh! The computer won
+          @else
+          The game was a tie
+        @endif </p>
+        </div>
+        @endif
 
 @endsection

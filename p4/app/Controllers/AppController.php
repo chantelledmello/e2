@@ -8,11 +8,19 @@ class AppController extends Controller
      */
     public function index()
     {
-        return $this->app->view('index');
+        # retrieve the $result array from the session
+        $result = $this->app->old('result', null);
+
+        # return view and pass $return array to the view
+        return $this->app->view('index', ['result' => $result]);
     }
 
     public function saveResults()
     {
+        // $this->app->validate([
+        //     'result' => 'required',
+        // ]);
+
         // Grab player input
         $user = $this->app->input('result');
 
@@ -32,16 +40,17 @@ class AppController extends Controller
         }
 
         // Persist results to the database
-        $data = [
+        # save input fields into the $result array
+        $result = [
             'user_pick' => $user,
             'computer_pick' => $computer,
             'winner' => $winner,
         ];
 
-        $this->app->db()->insert('results', $data);
+        $this->app->db()->insert('results', $result); # insert $result into 'results' table
 
-        //Redirect back to view
-        $this->app->redirect('/');
+        //Redirect back to index page
+        $this->app->redirect('/', ['result' => $result]); # persist $result array to the session
 
     }
 

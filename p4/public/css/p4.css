@@ -96,19 +96,19 @@ h2:first-of-type {
 h3 {
     width: 100%;
     font-weight: 400;
-    margin-bottom: 0.2rem;
     font-size: 1.2rem;
 }
 
 p:nth-of-type(2) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+hr {
+    width: 80%;
 }
 
 form>div {
     width: 80%;
-    border: solid black 1px;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -170,7 +170,7 @@ button {
     width: 30%;
     border-radius: 20px;
     padding: 0.5rem 0;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 button:hover {
@@ -188,10 +188,42 @@ p.errorMessage {
     font-weight: 900;
 }
 
-/* img {
-    width: 40px;
-    height: auto;
-  } */
+/*----------------------------------------------------
+Alert Message Styles
+-----------------------------------------------------*/
+
+div.alert {
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    width: 80%;
+    margin-top: 5px;
+}
+
+.alert p {
+    margin-bottom: 10px;
+}
+
+.alert-success {
+    border: solid rgb(127, 177, 127) 0.5px;
+    background-color: #D4EDDA;
+    color: darkgreen;
+}
+
+.alert-fail {
+    border: solid rgb(189, 136, 136) 0.5px;
+    background-color: #F7D6DA;
+    color: darkred;
+}
+
+.alert-neutral {
+    border: solid rgb(223, 223, 152) 0.5px;
+    background-color: #FFF3CD;
+    color: brown;
+}
+
+/*----------------------------------------------------
+Media Queries
+-----------------------------------------------------*/
 
 @media (max-width: 1024px) {
     main>div:first-of-type {
