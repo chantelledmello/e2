@@ -13,16 +13,14 @@
       </div>
       <h1> {{$app->config('app.name')}} </h1>
 
-      <!-- Display errors. If none, display confirmation message
+      <!-- Display errors. If none, display confirmation message -->
       @if($app->errorsExist())
       <div class="alert alert-fail" role="alert">
-        <ul>
         @foreach($app->errors() as $error)
-        <li>{{ $error }}</li>
+        <p>{{ $error }}</p>
         @endforeach
-        </ul>
       </div>
-      @endif -->
+      @endif
 
       <h3> Game Mechanics </h3>
       <p> Let's play rock, paper, scissors against the computer.

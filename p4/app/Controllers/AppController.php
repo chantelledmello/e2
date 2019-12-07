@@ -17,9 +17,9 @@ class AppController extends Controller
 
     public function saveResults()
     {
-        // $this->app->validate([
-        //     'result' => 'required',
-        // ]);
+        $this->app->validate([
+            'result' => 'required',
+        ]);
 
         // Grab player input
         $user = $this->app->input('result');
