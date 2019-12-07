@@ -15,7 +15,9 @@ Game No. {{ $result['id'] }}
 @else
 The game was a tie
 @endif <br/>
-<a href='/results'>&larr; Return to all game results</a>
+
+
+<a href='/results'><button type='button'> &larr;  Return to all game results </button> </a>
 </div>
 
 @endsection

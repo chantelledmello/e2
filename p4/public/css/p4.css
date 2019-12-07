@@ -21,7 +21,7 @@ main>div:first-of-type {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-radius: 2%;
+    border-radius: 14px;
     box-shadow: 19px 19px 90px -17px rgba(0, 0, 0, 0.3);
 }
 
@@ -104,11 +104,12 @@ p:nth-of-type(2) {
 }
 
 hr {
+    margin-top: 2rem;
     width: 80%;
 }
 
 form>div {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -167,10 +168,10 @@ p:first-of-type {
 
 button {
     position: relative;
-    width: 30%;
+    width: auto;
     border-radius: 20px;
-    padding: 0.5rem 0;
-    margin: 2rem 0;
+    padding: 0.5rem 1.2rem;
+    margin: 1.5rem 0 0 0;
 }
 
 button:hover {
@@ -246,7 +247,6 @@ Media Queries
     }
 
     form>div {
-        width: 55%;
         font-size: 1rem;
     }
 
@@ -254,9 +254,9 @@ Media Queries
         margin-left: 2.5rem;
     }
 
-    button {
+    /* button {
         width: 60%;
-    }
+    } */
 }
 
 @media (max-width: 780px) {
@@ -278,13 +278,9 @@ Media Queries
         padding: 0 2rem;
     }
 
-    form>div {
+    /* button {
         width: 80%;
-    }
-
-    button {
-        width: 80%;
-    }
+    } */
 
 }
 

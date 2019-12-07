@@ -32,7 +32,7 @@
       <h3> Pick One </h3>
       <p> Pick your throws for each round of the game using the radio buttons below. You can only pick one option per
         round.</p>
-      <form method='GET' action='/save-results'>
+      <form method='POST' action='/save-results'>
         <div>
           <input type="radio" name="result" value="rock" id="rock"> <label for="rock"> rock </label>
           <input type="radio" name="result" value="paper" id="paper"> <label for="paper"> paper </label>
@@ -65,6 +65,8 @@
           The game was a tie
         @endif </p>
         </div>
+
+        <a href='/results'><button type='button'> View More Results   &rarr; </button> </a>
         @endif
 
 @endsection

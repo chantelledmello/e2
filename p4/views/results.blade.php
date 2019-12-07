@@ -12,7 +12,8 @@ All Results
 <p class="result-text">  Game Result No. {{$result['id']}} </p>
 </a>
 @endforeach
-<a href='/'>&larr; Return Home</a>
+
+<a href='/'><button type='button'> &larr;  Return Home </button> </a>
 </div>
 
 @endsection
