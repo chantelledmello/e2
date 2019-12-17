@@ -1,8 +1,11 @@
-# e2framework
+*Any instructions/notes in italics should be removed from the template before submitting* 
 
-*e2framework* is a rudimentary PHP framework designed for the course [DGMD E-2 Web Programming for Beginners with PHP](https://hesweb.dev/e2).
+# Project 4
++ By: *Chantelle D'mello*
++ Production URL: <http://p4.chantelledmello.me>
 
-The goal of this software is to provide students an introduction to working with more advanced PHP frameworks such as Laravel and/or Symfony.
+## Outside resources
+*N/A*
 
-+ __Documentation:__ <https://hesweb.dev/e2/notes#/php/e2framework/installation>
-+ __Guide:__ <https://hesweb.dev/e2/notes#/php/frameworks/intro>
+## Notes for instructor
+*N/A*

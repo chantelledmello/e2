@@ -26,9 +26,8 @@
       <p> Let's play rock, paper, scissors against the computer.
         Pick your move and the computer will do the same.
         A tie is declared if both you and the computer throw the same move.
-        Otherwise: rock beats scissors, scissors beats paper, paper beats rock. At the end of
-        three rounds, an overall winner is declared. If two games tie,
-        the winner is the winner of the remaining round. Bonne chance!</p>
+        Otherwise: rock beats scissors, scissors beats paper, paper beats rock. Bonne chance!</p>
+
       <h3> Pick One </h3>
       <p> Pick your throws for each round of the game using the radio buttons below. You can only pick one option per
         round.</p>
